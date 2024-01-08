@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-family: "Arial", sans-serif;
 }
 
 * {
@@ -18,29 +19,73 @@ body {
 }
 
 input {
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   border: 1px solid #ddd;
-  height: 50px;
-  padding: 0 20px;
-  font-size: 14px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 button {
-  width: 600px;
-  height: 50px;
-  font-size: 14px;
+  width: 80%;
+  max-width: 600px;
+  height: 40px;
+  font-size: 16px;
   background: #069;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   font-weight: bold;
   color: #fff;
-  margin-top: 10px;
+  cursor: pointer;
 }
 
 .messages {
-  width: 600px;
-  height: 400px;
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
   margin: 20px 0;
   border: 1px solid #ddd;
   padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+/* Estilo para simular uma tela de celular antigo */
+body {
+  background-color: #f4f4f4;
+}
+
+#chat {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+input,
+button,
+.messages {
+  border-radius: 5px;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #057;
+}
+
+@media only screen and (max-width: 600px) {
+  input,
+  button,
+  .messages {
+    width: 100%;
+    max-width: none;
+  }
 }
